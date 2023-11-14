@@ -1,0 +1,11 @@
+@import 'styles/theme.scss';
+
+.button {
+   padding: 12px 30px;
+   background-color: $yellow;
+   color: black;
+   font-weight: 500;
+   border-radius: 15px;
+   border: none;
+   cursor: pointer;
+}

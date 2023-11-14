@@ -1,0 +1,14 @@
+@import 'styles/theme.scss';
+
+.wrapper {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.content {
+   width: 100%;
+   max-width: $maxWidth;
+   padding: 30px;
+}
