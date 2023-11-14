@@ -1,10 +1,9 @@
 import React from 'react';
-import TemplateInfo from 'TemplateInfo/TemplateInfo';
 
 const App = () => {
    return (
       <>
-         <TemplateInfo />
+         <h1>App</h1>
       </>
    );
 };
