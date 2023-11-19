@@ -5,6 +5,7 @@ import Main from 'components/Main/Main';
 import ContentTemplate from 'templates/ContentTemplate/ContentTemplates';
 
 import { products } from 'helpers/products';
+import AddProduct from 'components/AddProduct/AddProduct';
 
 const App = () => {
    const [productsList, setProductsList] = useState(products);
@@ -15,6 +16,10 @@ const App = () => {
 
          <ContentTemplate>
             <Main
+               productsList={productsList}
+               setProductsList={setProductsList}
+            />
+            <AddProduct
                productsList={productsList}
                setProductsList={setProductsList}
             />
