@@ -6,6 +6,7 @@ import ContentTemplate from 'templates/ContentTemplate/ContentTemplate';
 
 import { products } from 'helpers/products';
 import AddProduct from 'components/AddProduct/AddProduct';
+import Footer from 'components/Footer/Footer';
 
 const App = () => {
    const [productsList, setProductsList] = useState(products);
@@ -24,6 +25,8 @@ const App = () => {
                setProductsList={setProductsList}
             />
          </ContentTemplate>
+
+         <Footer />
       </>
    );
 };
