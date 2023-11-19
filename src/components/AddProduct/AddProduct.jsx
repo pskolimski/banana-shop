@@ -1,15 +1,16 @@
 import Button from 'components/Button/Button';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './AddProduct.module.scss';
 
 const AddProduct = ({ productsList, setProductsList }) => {
    const [name, setName] = useState('');
    const [description, setDescription] = useState('');
    const [photo, setPhoto] = useState(null);
-   const [price, setPrice] = useState(0);
-   const [amount, setAmount] = useState(0);
+   const [price, setPrice] = useState('');
+   const [amount, setAmount] = useState('');
    const [unit, setUnit] = useState('kg');
    const [error, setError] = useState(null);
+   const inputRef = useRef(null);
 
    const handleSubmit = () => {
       if (!name || !description || !photo || !price || !amount || !unit) {
@@ -21,9 +22,9 @@ const AddProduct = ({ productsList, setProductsList }) => {
          name,
          id: productsList.length + 1,
          img: URL.createObjectURL(photo),
-         quantity: amount,
+         quantity: parseFloat(amount),
+         price: parseFloat(price),
          description,
-         price,
          unit,
       };
 
@@ -34,10 +35,15 @@ const AddProduct = ({ productsList, setProductsList }) => {
       setName('');
       setDescription('');
       setPhoto(null);
-      setPrice(0);
-      setAmount(0);
+      setPrice('');
+      setAmount('');
       setUnit('kg');
+      inputRef.current.value = '';
    };
+
+   useEffect(() => {
+      console.log(photo);
+   }, [photo]);
 
    return (
       <div className={styles.wrapper} id="addProduct">
@@ -73,6 +79,7 @@ const AddProduct = ({ productsList, setProductsList }) => {
                      className={styles.input}
                      accept="image/*"
                      type="file"
+                     ref={inputRef}
                      onChange={(e) => setPhoto(e.target.files[0])}
                      id="productPhoto"
                   />
