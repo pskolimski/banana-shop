@@ -1,7 +1,8 @@
 @import 'styles/theme.scss';
 
 .wrapper {
-   width: 30%;
+   width: 32.6%;
+   min-width: 330px;
    background-color: $primary;
    display: flex;
    flex-direction: column;
@@ -70,4 +71,16 @@
 
 .description {
    font-size: 15px;
+}
+
+@media (max-width: 1070px) {
+   .wrapper {
+      width: 48%;
+   }
+}
+
+@media (max-width: 800px) {
+   .wrapper {
+      width: 100%;
+   }
 }
