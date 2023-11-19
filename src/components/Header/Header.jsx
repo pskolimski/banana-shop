@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Header.module.scss';
-import heroImage from 'assets/heroimage.svg';
+import { ReactComponent as HeroImage } from 'assets/heroimage.svg';
 import logo from 'assets/logo.svg';
 import Button from 'components/Button/Button';
+import { gsap } from 'gsap';
 
 const Header = () => {
+   const imageRef = useRef(null);
+
+   useEffect(() => {
+      const tl = gsap.timeline();
+
+      const image = imageRef.current;
+
+      const bottom = image.getElementById('bottom');
+      const orange1 = image.getElementById('orange1');
+      const orange2 = image.getElementById('orange2');
+      const water = image.getElementById('water');
+
+      gsap.set([bottom, orange1, orange2, water], { autoAlpha: 0 });
+
+      tl.fromTo(
+         bottom,
+         { y: '-=100' },
+         { y: 0, autoAlpha: 1, duration: 1, delay: 0.5 },
+      )
+         .fromTo(orange2, { x: '-=30' }, { x: 0, autoAlpha: 1, duration: 0.7 })
+         .fromTo(orange1, { y: '-=30' }, { y: 0, autoAlpha: 1, duration: 0.7 })
+         .fromTo(water, { x: '+=30' }, { x: 0, autoAlpha: 1, duration: 0.7 });
+   }, []);
+
    return (
       <div className={styles.wrapper}>
          <div className={styles.navbar}>
@@ -26,11 +51,7 @@ const Header = () => {
                </Button>
             </div>
             <div>
-               <img
-                  src={heroImage}
-                  alt="Hero image"
-                  className={styles.heroImage}
-               />
+               <HeroImage ref={imageRef} className={styles.heroImage} />
             </div>
          </div>
       </div>
