@@ -34,6 +34,11 @@ const Header = () => {
       <div className={styles.wrapper}>
          <div className={styles.navbar}>
             <img src={logo} alt="Logo" className={styles.logo} />
+
+            <div className={styles.navContent}>
+               <a href="/#products">Produkty</a>
+               <a href="/#addProduct">Dodaj produkt</a>
+            </div>
          </div>
 
          <div className={styles.hero}>

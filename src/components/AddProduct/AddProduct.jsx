@@ -40,7 +40,7 @@ const AddProduct = ({ productsList, setProductsList }) => {
    };
 
    return (
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} id="addProduct">
          <h2 className={styles.title}>
             Dodaj <span>nowy produkt</span>
          </h2>
