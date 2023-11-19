@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Header from 'components/Header/Header';
 import Main from 'components/Main/Main';
-import ContentTemplate from 'templates/ContentTemplate/ContentTemplates';
+import ContentTemplate from 'templates/ContentTemplate/ContentTemplate';
 
 import { products } from 'helpers/products';
 import AddProduct from 'components/AddProduct/AddProduct';

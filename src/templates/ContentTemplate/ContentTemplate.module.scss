@@ -5,10 +5,10 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 30px;
 }
 
 .content {
    width: 100%;
    max-width: $maxWidth;
-   padding: 30px;
 }
