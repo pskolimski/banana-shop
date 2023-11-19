@@ -68,3 +68,10 @@
    font-size: 15px;
    font-weight: 500;
 }
+
+@media (max-width: 650px) {
+   .inputsWrapper {
+      flex-direction: column;
+      gap: 0px;
+   }
+}
