@@ -1,0 +1,77 @@
+@import 'styles/theme.scss';
+
+.title {
+   font-size: 30px;
+
+   span {
+      color: $yellow;
+   }
+}
+
+.error {
+   font-size: 16px;
+   color: $red;
+   margin: 30px 0;
+}
+
+.wrapper {
+   margin: 50px 0;
+}
+
+.inputsWrapper {
+   width: 100%;
+   display: flex;
+   gap: 25px;
+}
+
+.form {
+   margin-top: 30px;
+}
+
+.formField {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin: 15px 0;
+}
+
+.input {
+   padding: 15px;
+   outline: none;
+   border-radius: 5px;
+   border: none;
+   background-color: $secondary;
+   color: white;
+
+   &:focus {
+      border-bottom: 2px solid $yellow;
+   }
+
+   &[type='file']::file-selector-button {
+      padding: 5px 10px;
+      background-color: $yellow;
+      color: black;
+      border-radius: 3px;
+      border: none;
+      font-weight: 500;
+      margin-right: 15px;
+      cursor: pointer;
+   }
+}
+
+.textarea {
+   height: 200px;
+}
+
+.label {
+   margin-bottom: 5px;
+   font-size: 15px;
+   font-weight: 500;
+}
+
+@media (max-width: 650px) {
+   .inputsWrapper {
+      flex-direction: column;
+      gap: 0px;
+   }
+}

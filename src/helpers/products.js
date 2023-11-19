@@ -14,7 +14,6 @@ export const products = [
       img: watermelon,
       price: 2.99,
       unit: 'kg',
-      category: 'owoce',
       quantity: 10,
       description:
          'Arbuz jest soczystym, słodkim owocem, który w upalny dzień przynosi orzeźwienie i przyjemność.',
@@ -24,7 +23,6 @@ export const products = [
       img: apricot,
       price: 3.99,
       unit: 'kg',
-      category: 'owoce',
       quantity: 0,
       description:
          'Morela jest owocem drzewa morelowego, należącym do rodziny różowatych.',
@@ -34,7 +32,6 @@ export const products = [
       img: carrot,
       price: 1.99,
       unit: 'kg',
-      category: 'warzywa',
       quantity: 10,
       description:
          'Marchew jest warzywem, które jest bogate w witaminy i minerały. Jest źródłem beta-karotenu.',
@@ -44,7 +41,6 @@ export const products = [
       img: dill,
       price: 0.99,
       unit: 'szt',
-      category: 'warzywa',
       quantity: 10,
       description:
          'Koper jest warzywem, które jest bogate w witaminy i minerały. Jest źródłem beta-karotenu.',
@@ -54,7 +50,6 @@ export const products = [
       img: fruits,
       price: 4.99,
       unit: 'kg',
-      category: 'owoce',
       quantity: 10,
       description:
          'Owoce są bogate w witaminy i minerały. Są źródłem beta-karotenu.',
@@ -64,7 +59,6 @@ export const products = [
       img: papaya,
       price: 6.99,
       unit: 'szt',
-      category: 'owoce',
       quantity: 10,
       description:
          'Papaja jest owocem drzewa papaja, należącym do rodziny papajowatych.',
@@ -74,7 +68,6 @@ export const products = [
       img: paprica,
       price: 2.99,
       unit: 'kg',
-      category: 'warzywa',
       quantity: 10,
       description:
          'Papryka jest warzywem, które jest bogate w witaminy i minerały. Jest źródłem beta-karotenu.',
@@ -84,7 +77,6 @@ export const products = [
       img: pear,
       price: 3.99,
       unit: 'kg',
-      category: 'owoce',
       quantity: 10,
       description:
          'Gruszka jest owocem drzewa gruszy, należącym do rodziny różowatych.',
@@ -94,7 +86,6 @@ export const products = [
       img: potato,
       price: 1.99,
       unit: 'kg',
-      category: 'warzywa',
       quantity: 10,
       description:
          'Ziemniak jest warzywem, które jest bogate w witaminy i minerały. Jest źródłem beta-karotenu.',

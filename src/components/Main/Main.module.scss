@@ -13,10 +13,12 @@
 }
 
 .items {
+   width: 100%;
    margin-top: 50px;
    display: flex;
-   justify-content: start;
+   justify-content: center;
    flex-wrap: wrap;
+   flex-flow: wrap;
    gap: 1%;
    row-gap: 15px;
 }

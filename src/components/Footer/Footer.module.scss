@@ -1,0 +1,36 @@
+@import 'styles/theme.scss';
+
+.wrapper {
+   width: 100%;
+   background-color: $primary;
+   padding: 50px 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+   margin-top: 30px;
+}
+
+.logo {
+   width: 200px;
+}
+
+.paragraph {
+   max-width: 450px;
+   font-weight: 500;
+   font-size: 15px;
+   text-align: center;
+}
+
+.author {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.authorLogo {
+   width: 115px;
+}
