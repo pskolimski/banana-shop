@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Product.module.scss';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Product = ({ product, onClick }) => {
+   const wrapperRef = useRef(null);
+
+   useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const appear = gsap.fromTo(
+         wrapperRef.current,
+         { autoAlpha: 0, y: '-=30' },
+         { autoAlpha: 1, y: 0, duration: 1 },
+      );
+      ScrollTrigger.create({
+         trigger: wrapperRef.current,
+         start: 'top center',
+         end: '+=500',
+         animation: appear,
+      });
+   }, []);
+
    return (
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} ref={wrapperRef}>
          <img src={product.img} alt={product.name} className={styles.image} />
          <div className={styles.header}>
             <div>
