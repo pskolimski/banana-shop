@@ -4,7 +4,7 @@
 
 1. Clone the repository
    ```
-   git clone https://revimeister@bitbucket.org/revku-zsmi/banana-shop.git
+   git clone https://github.com/pskolimski/banana-shop
    ```
 1. Install dependencies
    ```
